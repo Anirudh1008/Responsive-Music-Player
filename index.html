@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telugu Songs Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <div class="player">
+    <div class="cover" id="cover">
+      <img src="godari.jpg" alt="Cover" id="coverImg"/>
+    </div>
+    <div class="info">
+      <h2 id="songName">Godari Gattu Meedha</h2>
+      <p id="singer">Singer: Ramana Gogula, Madhu Priya</p>
+      <p id="director">Music Director: Bheems Ceciroleo</p>
+      <p id="movie">Movie: Sankranthiki Vasthunam</p>
+    </div>
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()" id="playBtn">▶</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+    <div class="duration">
+      <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+    </div>
+    <div class="progress-container" onclick="setProgress(event)">
+      <div class="progress" id="progress"></div>
+    </div>
+    <audio id="audio"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
